@@ -19,17 +19,17 @@ namespace Kogane.Internal
                     width               = guidWidth,
                     minWidth            = guidWidth,
                     maxWidth            = guidWidth,
-                    headerContent       = m_guidHeaderContent ??= new GUIContent( "GUID" ),
+                    headerContent       = m_guidHeaderContent ??= new( "GUID" ),
                     headerTextAlignment = TextAlignment.Center,
                 },
                 new()
                 {
-                    headerContent       = m_assetPathHeaderContent ??= new GUIContent( "Asset Path" ),
+                    headerContent       = m_assetPathHeaderContent ??= new( "Asset Path" ),
                     headerTextAlignment = TextAlignment.Center,
                 },
             };
 
-            this.state = new MultiColumnHeaderState( columns );
+            this.state = new( columns );
         }
     }
 }

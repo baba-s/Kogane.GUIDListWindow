@@ -22,14 +22,14 @@ namespace Kogane.Internal
         {
             var state = new TreeViewState();
 
-            m_header = new GuidListHeader( null );
+            m_header = new( null );
 
-            m_treeView = new GuidListTreeView( state, m_header )
+            m_treeView = new( state, m_header )
             {
                 searchString = SessionState.GetString( SEARCH_STRING_STATE_KEY, string.Empty )
             };
 
-            m_searchField                         =  new SearchField();
+            m_searchField                         =  new();
             m_searchField.downOrUpArrowKeyPressed += m_treeView.SetFocusAndEnsureSelectedItem;
         }
 

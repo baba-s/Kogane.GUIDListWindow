@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
@@ -40,7 +40,7 @@ namespace Kogane.Internal
                     .GetAllAssetPaths()
                     .OrderBy( x => x )
                     .Select( ( x, index ) => new GuidListTreeViewItem( index, x ) )
-                    .DefaultIfEmpty( new GuidListTreeViewItem( 0, string.Empty ) )
+                    .DefaultIfEmpty( new( 0, string.Empty ) )
                     .ToArray()
                 ;
 
